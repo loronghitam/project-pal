@@ -30,6 +30,7 @@
             dataType: "json",
             success: function (response) {
                 $('#name-edit').val(response.name);
+                $('#name-kode').val(response.kode);
                 $('#phone-edit').val(response.phone);
                 $('#image-edit').val(response.image);
                 $('#amount-edit').val(response.amount);
@@ -208,6 +209,10 @@
             },
                 {
                     data: 'updated_at',
+
+                },
+                {
+                    data: 'kode',
 
                 },
                 {

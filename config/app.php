@@ -187,6 +187,8 @@ return [
          */
         Spatie\Permission\PermissionServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Alfa6661\AutoNumber\AutoNumberServiceProvider::class,
+
 
         /*
          * Application Service Providers...

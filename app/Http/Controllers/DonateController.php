@@ -31,15 +31,12 @@ class DonateController extends Controller
 
     public function export(Request $request)
     {
-//        $category = "Magni Veritatis Facere Eligendi.,Voluptatem Placeat Ut Aut Dicta.";
-//        for ($i = 0; $i < count($request->category); $i++) {
-//            $category .= $request->category[$i] . ',';
-//        }
-
-//        dd($category);
-
-
-        return Excel::download(new UsersExport($request->awal, $request->akhir, $request->category), 'users.xlsx');
+        $category = $request->category;
+        if ($request->input('category')[0] == 'all') {
+            $category = Program::all('title');
+        }
+        $name = "Little Ambulance Report " . $request->awal . "-" . $request->akhir . ".xlsx";
+        return Excel::download(new UsersExport($request->awal, $request->akhir, $category), $name);
     }
 
     /**

@@ -6,8 +6,14 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Alfa6661\\AutoNumber\\AutoNumber' => $vendorDir . '/alfa6661/laravel-autonumber/src/AutoNumber.php',
+    'Alfa6661\\AutoNumber\\AutoNumberServiceProvider' => $vendorDir . '/alfa6661/laravel-autonumber/src/AutoNumberServiceProvider.php',
+    'Alfa6661\\AutoNumber\\AutoNumberTrait' => $vendorDir . '/alfa6661/laravel-autonumber/src/AutoNumberTrait.php',
+    'Alfa6661\\AutoNumber\\Models\\AutoNumber' => $vendorDir . '/alfa6661/laravel-autonumber/src/Models/AutoNumber.php',
+    'Alfa6661\\AutoNumber\\Observers\\AutoNumberObserver' => $vendorDir . '/alfa6661/laravel-autonumber/src/Observers/AutoNumberObserver.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Exports\\UsersExport' => $baseDir . '/app/Exports/UsersExport.php',
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DonateController' => $baseDir . '/app/Http/Controllers/DonateController.php',

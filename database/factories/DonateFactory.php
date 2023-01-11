@@ -22,6 +22,7 @@ class DonateFactory extends Factory
     {
         $rekening = ['BRI', 'BCA', 'BSI'];
         return [
+            'kode' => 'kodeunik',
             'name' => fake()->name(),
             'email' => fake()->email(),
             'phone' => fake()->phoneNumber(),

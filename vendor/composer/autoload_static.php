@@ -185,6 +185,7 @@ class ComposerStaticInit0e44cbcc82d990bde6e8093ea04e5089
         'A' => 
         array (
             'App\\' => 4,
+            'Alfa6661\\AutoNumber\\' => 20,
         ),
     );
 
@@ -551,6 +552,10 @@ class ComposerStaticInit0e44cbcc82d990bde6e8093ea04e5089
             0 => __DIR__ . '/../..' . '/app',
             1 => __DIR__ . '/..' . '/laravel/pint/app',
         ),
+        'Alfa6661\\AutoNumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -571,8 +576,14 @@ class ComposerStaticInit0e44cbcc82d990bde6e8093ea04e5089
     );
 
     public static $classMap = array (
+        'Alfa6661\\AutoNumber\\AutoNumber' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/AutoNumber.php',
+        'Alfa6661\\AutoNumber\\AutoNumberServiceProvider' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/AutoNumberServiceProvider.php',
+        'Alfa6661\\AutoNumber\\AutoNumberTrait' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/AutoNumberTrait.php',
+        'Alfa6661\\AutoNumber\\Models\\AutoNumber' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/Models/AutoNumber.php',
+        'Alfa6661\\AutoNumber\\Observers\\AutoNumberObserver' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/Observers/AutoNumberObserver.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Exports\\UsersExport' => __DIR__ . '/../..' . '/app/Exports/UsersExport.php',
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DonateController' => __DIR__ . '/../..' . '/app/Http/Controllers/DonateController.php',

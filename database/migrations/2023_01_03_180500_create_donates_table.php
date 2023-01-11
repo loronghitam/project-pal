@@ -14,6 +14,7 @@ return new class extends Migration {
     {
         Schema::create('donates', function (Blueprint $table) {
             $table->id();
+            $table->string('kode');
             $table->string('name');
             $table->string('email');
             $table->string('phone');

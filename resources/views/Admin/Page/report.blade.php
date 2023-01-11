@@ -19,11 +19,12 @@
                                 id="username"
                                 name="awal"
                                 autofocus
+                                required
                             />
                         </div>
                         <div class="mb-3 col-md-4">
-                            <label for="lastName" class="form-label">Name</label>
-                            <input class="form-control" type="date" name="akhir" id="name"/>
+                            <label for="lastName" class="form-label">Tanggal Akhir</label>
+                            <input class="form-control" type="date" name="akhir" id="name" required/>
                         </div>
                         <div class="mb-3 col-md-4">
                             <label for="exampleFormControlSelect2" class="form-label">Category</label>
@@ -34,7 +35,7 @@
                                 aria-label="Multiple select example"
                                 name="category[]"
                             >
-                                <option selected>Semua</option>
+                                <option value="all">Semua</option>
                                 @foreach($program as $data)
                                     <option value="{{ $data->title }}">{{ $data->title }}</option>
                                 @endforeach
@@ -45,7 +46,6 @@
                             <button type="submit" class="btn btn-primary">Export</button>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>

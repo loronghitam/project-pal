@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
-class UsersExport implements FromCollection, WithHeadings
+class UsersExport implements FromQuery, WithHeadings
 {
     protected $awal;
     protected $akhir;
@@ -32,11 +33,11 @@ class UsersExport implements FromCollection, WithHeadings
     /**
      * @return Collection
      */
-    public function collection()
+    public function query()
     {
         return Donate::join('programs', 'donates.program_id', 'programs.id')
             ->whereBetween('programs.created_at', [$this->awal, $this->akhir])
-            ->WhereIn('programs.title', [$this->kategory])
+            ->WhereIn('programs.title', $this->kategory)
             ->select(
                 'donates.created_at',
                 'donates.name',
@@ -44,7 +45,7 @@ class UsersExport implements FromCollection, WithHeadings
                 'donates.phone',
                 'donates.rekening',
                 'donates.amount',
-                'programs.title')->get();
+                'programs.title');
     }
 
     public function headings(): array

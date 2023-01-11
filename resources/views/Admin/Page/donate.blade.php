@@ -14,6 +14,7 @@
                     <tr>
                         <th width="5%">No</th>
                         <th>Dibuat</th>
+                        <th>Kode</th>
                         <th>Nama</th>
                         <th>Jumlah</th>
                         <th width="20%">Nama Program</th>

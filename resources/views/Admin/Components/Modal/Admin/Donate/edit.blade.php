@@ -13,11 +13,19 @@
                 </div>
                 <div id="editError" class="text-center"></div>
                 <div class="modal-body">
+
                     <div class="form-floating">
+                        <input type="text" class="form-control" id="name-kode" placeholder="John Doe"
+                               aria-describedby="floatingInputHelp" name="kode" readonly/>
+                        <label for="title-kode">Kode</label>
+                    </div>
+
+                    <div class="form-floating mt-3">
                         <input type="text" class="form-control" id="name-edit" placeholder="John Doe"
                                aria-describedby="floatingInputHelp" name="name" readonly/>
                         <label for="title-edit">Name</label>
                     </div>
+
 
                     <div class="form-floating mt-3">
                         <input type="text" class="form-control" id="email-edit" placeholder="John Doe"

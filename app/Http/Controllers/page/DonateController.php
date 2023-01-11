@@ -64,12 +64,12 @@ class DonateController extends Controller
             ];
         } else {
             try {
-                DB::transaction(function () use ($request) {
+                DB::transaction(function () use ($request, &$donate) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
                     $destination = base_path('public/images/donate/');
                     $amount = (int)str_replace(',', '', $request->amount);
-                    Donate::create([
+                    $donate = Donate::create([
                         'name' => $request->name,
                         'email' => $request->email,
                         'phone' => $request->phone,
@@ -82,7 +82,7 @@ class DonateController extends Controller
                 });
 
                 $json = [
-                    'msg' => 'Pembayaran berhasil dilakukan',
+                    'msg' => "Pembayaran denga kode $donate->kode telah dilakakukan",
                     'status' => true
                 ];
             } catch (Exception $e) {

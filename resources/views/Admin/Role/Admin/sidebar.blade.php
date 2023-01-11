@@ -45,7 +45,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="{{url('donates')}}" class="menu-link">
+            <a href="{{url('report')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Laporan Transaksi Donasi</div>
             </a>
