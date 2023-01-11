@@ -104,7 +104,7 @@ class ProgramController extends Controller
                         'prioritas' => $prioritas,
                         'end_program' => $request->end_program,
                         'status' => 'Aktif',
-                        'user_id' => 1,
+                        'user_id' => auth()->user()->id,
                     ]);
                     $request->file('image')->move($destination, $image);
                 });
@@ -187,13 +187,20 @@ class ProgramController extends Controller
         } else {
             try {
                 DB::transaction(function () use ($request, $id) {
+                    if ($request->prioritas == "on") {
+                        $prioritas = "Iya";
+                    } else {
+                        $prioritas = "Tidak";
+                    }
                     DB::table('programs')->where('id', $id)->update([
                         'title' => $request->title,
                         'slug' => Str::slug($request->title),
                         'body' => $request->body,
                         'funding' => $request->funding,
                         'end_program' => $request->end_program,
-                        'user_id' => 1,
+                        'status' => $request->status,
+                        'prioritas' => $prioritas,
+                        'user_id' => auth()->user()->id,
                     ]);
                     if ($request->has('image')) {
                         $education = News::find($id);

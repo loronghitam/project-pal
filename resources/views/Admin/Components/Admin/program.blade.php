@@ -35,6 +35,7 @@
                 $('#funding-edit').val(response.funding);
                 $('#end_program-edit').val(response.end_program);
                 $("#status-edit").val(response.status).change();
+                (response.prioritas == 'Iya') ? $("#prioritas-edit").prop('checked', true) : $("#prioritas-edit").prop('checked', false);
                 $('#body-edit').summernote('reset');
                 $('#body-edit').summernote('editor.pasteHTML', response.body);
                 Swal.close();

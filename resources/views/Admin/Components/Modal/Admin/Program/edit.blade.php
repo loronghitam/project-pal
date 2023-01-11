@@ -26,6 +26,11 @@
                         <label for="name">Tanggal Selesai</label>
                     </div>
 
+                    <div class="form-check form-switch mt-3">
+                        <input class="form-check-input" type="checkbox" id="prioritas-edit" name="prioritas"/>
+                        <label class="form-check-label" for="prioritas">Prioritas input</label>
+                    </div>
+
                     <div class="mt-3">
                         <label for="status-edit" class="form-label">Status Program</label>
                         <select id="status-edit" class="form-select" name="status">
