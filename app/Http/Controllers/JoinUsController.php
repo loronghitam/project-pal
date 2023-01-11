@@ -120,7 +120,7 @@ class JoinUsController extends Controller
             })
             ->addIndexColumn()
             ->addColumn('image', function ($row) {
-                return '<image class="img-thumbnail" src="' . public_path('images/joinus/' . $row->image) . '">';
+                return '<image class="img-thumbnail" src="' . asset('images/joinus/' . $row->image) . '">';
             })
             ->addColumn('action', function ($row) {
                 $data = [
