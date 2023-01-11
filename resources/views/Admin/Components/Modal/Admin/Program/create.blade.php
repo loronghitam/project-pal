@@ -10,7 +10,7 @@
 
                 <div class="modal-body">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="name" placeholder="John Doe"
+                        <input type="text" class="form-control" id="name"
                                aria-describedby="floatingInputHelp" name="title"/>
                         <label for="name">Judul</label>
                     </div>
@@ -25,15 +25,6 @@
                         <input type="date" class="form-control" id="end_program" aria-describedby="floatingInputHelp"
                                name="end_program"/>
                         <label for="name">Tanggal Selesai</label>
-                    </div>
-
-                    <div class="mt-3">
-                        <label for="defaultSelect" class="form-label">Status Program</label>
-                        <select id="defaultSelect" class="form-select">
-                            <option>Default select</option>
-                            <option value="Aktif">Aktif</option>
-                            <option value="Tidak Aktif">Tidak Aktif</option>
-                        </select>
                     </div>
 
                     <div class="form-check form-switch mt-3">

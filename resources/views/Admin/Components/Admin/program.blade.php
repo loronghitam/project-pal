@@ -6,6 +6,7 @@
         $('#body').summernote({
             placeholder: 'Deskripsi',
             height: 300
+
         });
         $('#body').summernote('reset');
 
@@ -33,6 +34,7 @@
                 $('#title-edit').val(response.title);
                 $('#funding-edit').val(response.funding);
                 $('#end_program-edit').val(response.end_program);
+                $("#status-edit").val(response.status).change();
                 $('#body-edit').summernote('reset');
                 $('#body-edit').summernote('editor.pasteHTML', response.body);
                 Swal.close();

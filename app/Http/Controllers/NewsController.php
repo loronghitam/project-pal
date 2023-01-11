@@ -40,6 +40,7 @@ class NewsController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
+
         $rules = [
             'title' => 'unique:news',
         ];
@@ -73,12 +74,12 @@ class NewsController extends Controller
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
                     $destination = public_path('images/berita/');
 
-                    $news = News::create([
+                    News::create([
                         'title' => $request->title,
                         'slug' => Str::slug($request->title),
                         'body' => $request->body,
                         'image' => $image,
-                        'user_id' => 1,
+                        'user_id' => auth()->user()->id,
                     ]);
                     $request->file('image')->move($destination, $image);
                 });
@@ -160,11 +161,11 @@ class NewsController extends Controller
         } else {
             try {
                 DB::transaction(function () use ($request, $id) {
-                    DB::table('news')->where('id', $id)->update([
+                    DB::table('news')->where('id', '=', $id)->update([
                         'title' => $request->title,
                         'slug' => Str::slug($request->title),
                         'body' => $request->body,
-                        'user_id' => 1,
+                        'user_id' => auth()->user()->id,
                     ]);
                     if ($request->has('image')) {
                         $education = News::find($id);

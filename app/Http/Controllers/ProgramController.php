@@ -103,13 +103,14 @@ class ProgramController extends Controller
                         'image' => $image,
                         'prioritas' => $prioritas,
                         'end_program' => $request->end_program,
+                        'status' => 'Aktif',
                         'user_id' => 1,
                     ]);
                     $request->file('image')->move($destination, $image);
                 });
 
                 $json = [
-                    'msg' => 'Berita berhasil ditambahkan',
+                    'msg' => 'Program berhasil dibuat',
                     'status' => true
                 ];
             } catch (Exception $e) {
