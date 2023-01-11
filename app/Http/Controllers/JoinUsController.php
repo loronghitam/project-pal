@@ -70,7 +70,7 @@ class JoinUsController extends Controller
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public_html/images/joinus/');
+                    $destination = asset('images/joinus/');
 
                     JoinUs::create([
                         'title' => $request->title,
@@ -178,14 +178,14 @@ class JoinUsController extends Controller
                         $education = JoinUs::find($id);
                         $oldImage = $education->image;
                         if ($oldImage) {
-                            $pleaseRemove = base_path('public_html/images/joinus/') . $oldImage;
+                            $pleaseRemove = asset('images/joinus/') . $oldImage;
                             if (file_exists($pleaseRemove)) {
                                 unlink($pleaseRemove);
                             }
                         }
                         $extension = $request->file('image')->getClientOriginalExtension();
                         $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                        $destination = base_path('public_html/images/joinus/');
+                        $destination = asset('images/joinus/');
                         JoinUs::where('id', '=', $id)->update([
                             'image' => $image
                         ]);
@@ -226,7 +226,7 @@ class JoinUsController extends Controller
             }
             $oldImage = $event->image;
             if ($oldImage) {
-                $pleaseRemove = base_path('public_html/images/joinus/') . $oldImage;
+                $pleaseRemove = asset('images/joinus/') . $oldImage;
 
                 if (file_exists($pleaseRemove)) {
                     unlink($pleaseRemove);
