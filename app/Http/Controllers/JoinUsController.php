@@ -46,33 +46,33 @@ class JoinUsController extends Controller
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
             $json = [
-                'msg'       => 'Judul sudah digunakan!',
-                'status'    => false
+                'msg' => 'Judul sudah digunakan!',
+                'status' => false
             ];
             return Response::json($json);
         } elseif ($request->title == NULL) {
             $json = [
-                'msg'       => 'Mohon berikan judul',
-                'status'    => false
+                'msg' => 'Mohon berikan judul',
+                'status' => false
             ];
         } elseif ($request->body == NULL) {
             $json = [
-                'msg'       => 'Mohon berikan deskripsi',
-                'status'    => false
+                'msg' => 'Mohon berikan deskripsi',
+                'status' => false
             ];
         } elseif ($request->image == NULL) {
             $json = [
-                'msg'       => 'Mohon berikan gambar',
-                'status'    => false
+                'msg' => 'Mohon berikan gambar',
+                'status' => false
             ];
         } else {
             try {
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public/images/joinus/');
+                    $destination = base_path('public_html/images/joinus/');
 
-                        JoinUs::create([
+                    JoinUs::create([
                         'title' => $request->title,
                         'slug' => Str::slug($request->title),
                         'body' => $request->body,
@@ -87,9 +87,9 @@ class JoinUsController extends Controller
                 ];
             } catch (Exception $e) {
                 $json = [
-                    'msg'       => 'Error',
-                    'status'    => false,
-                    'e'         => $e
+                    'msg' => 'Error',
+                    'status' => false,
+                    'e' => $e
                 ];
             }
         }
@@ -107,7 +107,7 @@ class JoinUsController extends Controller
     {
         if (is_numeric($id)) {
             $data = DB::table('join_us')
-                ->where('id','=', $id)
+                ->where('id', '=', $id)
                 ->first();
             return Response::json($data);
         }
@@ -135,7 +135,7 @@ class JoinUsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return Response
      */
     public function edit($id)
@@ -147,7 +147,7 @@ class JoinUsController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  int  $id
+     * @param int $id
      * @return JsonResponse
      */
     public function update(Request $request, $id)
@@ -157,14 +157,14 @@ class JoinUsController extends Controller
         ]);
         if ($validator->fails()) {
             $json = [
-                'msg'       => 'Judul sudah digunakan!',
-                'status'    => false
+                'msg' => 'Judul sudah digunakan!',
+                'status' => false
             ];
             return Response::json($json);
         } elseif ($request->title == NULL) {
             $json = [
-                'msg'       => 'Mohon berikan judul',
-                'status'    => false
+                'msg' => 'Mohon berikan judul',
+                'status' => false
             ];
         } else {
             try {
@@ -178,14 +178,14 @@ class JoinUsController extends Controller
                         $education = JoinUs::find($id);
                         $oldImage = $education->image;
                         if ($oldImage) {
-                            $pleaseRemove = base_path('public/images/joinus/')  . $oldImage;
+                            $pleaseRemove = base_path('public_html/images/joinus/') . $oldImage;
                             if (file_exists($pleaseRemove)) {
                                 unlink($pleaseRemove);
                             }
                         }
                         $extension = $request->file('image')->getClientOriginalExtension();
                         $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                        $destination = base_path('public/images/joinus/');
+                        $destination = base_path('public_html/images/joinus/');
                         JoinUs::where('id', '=', $id)->update([
                             'image' => $image
                         ]);
@@ -199,9 +199,9 @@ class JoinUsController extends Controller
                 ];
             } catch (Exception $e) {
                 $json = [
-                    'msg'       => 'Error',
-                    'status'    => false,
-                    'e'         => $e
+                    'msg' => 'Error',
+                    'status' => false,
+                    'e' => $e
                 ];
             }
         }
@@ -226,7 +226,7 @@ class JoinUsController extends Controller
             }
             $oldImage = $event->image;
             if ($oldImage) {
-                $pleaseRemove = base_path('public/images/joinus/') . $oldImage;
+                $pleaseRemove = base_path('public_html/images/joinus/') . $oldImage;
 
                 if (file_exists($pleaseRemove)) {
                     unlink($pleaseRemove);
