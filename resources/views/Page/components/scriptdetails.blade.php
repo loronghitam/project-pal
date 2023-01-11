@@ -10,14 +10,14 @@
         $('#createModal').modal('show');
     }
 
-    $(function() {
+    $(function () {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             }
         });
 
-        $('#createSubmit').click(function(e) {
+        $('#createSubmit').click(function (e) {
             e.preventDefault();
             var formData = new FormData($("#createForm")[0]);
             Swal.fire({
@@ -36,7 +36,7 @@
                 cache: false,
                 processData: false,
                 contentType: false,
-                success: function(data) {
+                success: function (data) {
                     Swal.close();
                     if (data.status) {
                         Swal.fire(
@@ -49,7 +49,7 @@
                     } else {
                         Swal.fire(
                             'Error!',
-                            response.msg,
+                            data.msg,
                             'warning'
                         )
                     }

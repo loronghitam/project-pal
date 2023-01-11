@@ -19,7 +19,8 @@
                                         <h1>{{ $data->title }}</h1>
                                         <p>{!! $data->body !!}</p>
                                         <div class="add-bag d-flex align-items-center">
-                                            <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
+                                            <a class="add-btn" onclick="create()"><span
+                                                    class="lnr lnr-cross"></span></a>
                                             <span class="add-text text-uppercase">Donate</span>
                                         </div>
                                     </div>

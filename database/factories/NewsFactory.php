@@ -20,14 +20,14 @@ class NewsFactory extends Factory
     public function definition(): array
     {
         $title = $this->faker->sentence();
-        $image = [1,2,3,4,5];
+        $image = [1, 2, 3, 4, 5];
 
         return [
             "title" => Str::title($title),
             "slug" => Str::slug($title),
             "body" => $this->faker->paragraph(),
-            'image' => fake()->randomElement($image,) .'.png',
-            "user_id" => User::all()->random()->id,
+            'image' => fake()->randomElement($image,) . '.png',
+            "user_id" => User::where('id', '!=', 1)->get()->random()->id,
         ];
     }
 }

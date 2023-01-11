@@ -32,7 +32,7 @@ class ProgramFactory extends Factory
             "status" => 'Aktif',
             "prioritas" => fake()->randomElement($desc),
             "end_program" => $this->faker->dateTimeBetween('now', '+12 month'),
-            "user_id" => User::all()->random()->id,
+            "user_id" => User::where('id', '!=', 1)->get()->random()->id,
         ];
     }
 }

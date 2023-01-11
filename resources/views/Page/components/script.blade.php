@@ -46,6 +46,7 @@
                         )
                         $('#createModal').modal('hide');
                     } else {
+                        console.log('masuk');
                         Swal.fire(
                             'Error!',
                             data.msg,
