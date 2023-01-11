@@ -14,7 +14,8 @@
                 <div id="editError" class="text-center"></div>
                 <div class="modal-body">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="title-edit" placeholder="John Doe" aria-describedby="floatingInputHelp" name="title"/>
+                        <input type="text" class="form-control" id="title-edit" aria-describedby="floatingInputHelp"
+                               name="title"/>
                         <label for="title-edit">Judul</label>
                     </div>
                     <div class="form-input mt-3">

@@ -87,7 +87,7 @@ class ProgramController extends Controller
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public/images/program/');
+                    $destination = public_path('images/program/');
 
                     if ($request->prioritas == "on") {
                         $prioritas = "Iya";
@@ -198,14 +198,14 @@ class ProgramController extends Controller
                         $education = News::find($id);
                         $oldImage = $education->image;
                         if ($oldImage) {
-                            $pleaseRemove = base_path('public/images/program/') . $oldImage;
+                            $pleaseRemove = public_path('images/program/') . $oldImage;
                             if (file_exists($pleaseRemove)) {
                                 unlink($pleaseRemove);
                             }
                         } else {
                             $extension = $request->file('image')->getClientOriginalExtension();
                             $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                            $destination = base_path('public/images/program/');
+                            $destination = public_path('images/program/');
                             Program::where('id', '=', $id)->update([
                                 'image' => $image
                             ]);
@@ -247,7 +247,7 @@ class ProgramController extends Controller
             }
             $oldImage = $event->image;
             if ($oldImage) {
-                $pleaseRemove = base_path('public/images/program/') . $oldImage;
+                $pleaseRemove = public_path('images/program/') . $oldImage;
 
                 if (file_exists($pleaseRemove)) {
                     unlink($pleaseRemove);

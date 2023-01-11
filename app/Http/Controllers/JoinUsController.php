@@ -70,7 +70,7 @@ class JoinUsController extends Controller
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = asset('images/joinus/');
+                    $destination = public_path('images/joinus/');
 
                     JoinUs::create([
                         'title' => $request->title,
@@ -120,7 +120,7 @@ class JoinUsController extends Controller
             })
             ->addIndexColumn()
             ->addColumn('image', function ($row) {
-                return '<image class="img-thumbnail" src="' . asset('images/joinus/' . $row->image) . '">';
+                return '<image class="img-thumbnail" src="' . public_path('images/joinus/' . $row->image) . '">';
             })
             ->addColumn('action', function ($row) {
                 $data = [
@@ -178,14 +178,14 @@ class JoinUsController extends Controller
                         $education = JoinUs::find($id);
                         $oldImage = $education->image;
                         if ($oldImage) {
-                            $pleaseRemove = asset('images/joinus/') . $oldImage;
+                            $pleaseRemove = public_path('images/joinus/') . $oldImage;
                             if (file_exists($pleaseRemove)) {
                                 unlink($pleaseRemove);
                             }
                         }
                         $extension = $request->file('image')->getClientOriginalExtension();
                         $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                        $destination = asset('images/joinus/');
+                        $destination = public_path('images/joinus/');
                         JoinUs::where('id', '=', $id)->update([
                             'image' => $image
                         ]);
@@ -226,7 +226,7 @@ class JoinUsController extends Controller
             }
             $oldImage = $event->image;
             if ($oldImage) {
-                $pleaseRemove = asset('images/joinus/') . $oldImage;
+                $pleaseRemove = public_path('images/joinus/') . $oldImage;
 
                 if (file_exists($pleaseRemove)) {
                     unlink($pleaseRemove);

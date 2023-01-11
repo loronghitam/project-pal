@@ -18,14 +18,14 @@ class BergabungController extends Controller
 {
     public function bergabung()
     {
-        $data = JoinUs::orderBy('id','desc')->get();
+        $data = JoinUs::orderBy('id', 'desc')->get();
 
-        return view('Page.page.bergabung',['bergabung' => $data]);
+        return view('Page.page.bergabung', ['bergabung' => $data]);
     }
 
     public function show($id)
     {
-        $data = JoinUs::where('id','=',$id)->first();
+        $data = JoinUs::where('id', '=', $id)->first();
 
         return Response::json($data);
     }
@@ -34,36 +34,36 @@ class BergabungController extends Controller
     {
         if ($request->name == NULL) {
             $json = [
-                'msg'       => 'Nama harus diisi !',
-                'status'    => false
+                'msg' => 'Nama harus diisi !',
+                'status' => false
             ];
             return Response::json($json);
         } elseif ($request->email == NULL) {
             $json = [
-                'msg'       => 'Email Harus diisi !',
-                'status'    => false
+                'msg' => 'Email Harus diisi !',
+                'status' => false
             ];
         } elseif ($request->phone == NULL) {
             $json = [
-                'msg'       => 'Phone harus diisi',
-                'status'    => false
+                'msg' => 'Phone harus diisi',
+                'status' => false
             ];
         } elseif ($request->motivation == NULL) {
             $json = [
-                'msg'       => 'motivasi gambar',
-                'status'    => false
+                'msg' => 'motivasi gambar',
+                'status' => false
             ];
         } elseif ($request->file == NULL) {
             $json = [
-                'msg'       => 'Berkas harus diisi',
-                'status'    => false
+                'msg' => 'Berkas harus diisi',
+                'status' => false
             ];
-        }  else {
+        } else {
             try {
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('file')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public/file/');
+                    $destination = public_path('file/');
 
                     UserJoin::create([
                         'name' => $request->name,
@@ -83,9 +83,9 @@ class BergabungController extends Controller
                 ];
             } catch (Exception $e) {
                 $json = [
-                    'msg'       => 'Error',
-                    'status'    => false,
-                    'e'         => $e
+                    'msg' => 'Error',
+                    'status' => false,
+                    'e' => $e
                 ];
             }
         }

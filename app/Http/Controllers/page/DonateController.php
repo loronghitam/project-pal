@@ -67,7 +67,7 @@ class DonateController extends Controller
                 DB::transaction(function () use ($request, &$donate) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public/images/donate/');
+                    $destination = public_path('images/donate/');
                     $amount = (int)str_replace(',', '', $request->amount);
                     $donate = Donate::create([
                         'name' => $request->name,

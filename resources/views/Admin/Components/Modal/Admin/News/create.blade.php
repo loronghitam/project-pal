@@ -15,8 +15,9 @@
 
                 <div class="modal-body">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="name" placeholder="John Doe" aria-describedby="floatingInputHelp" name="title"/>
-                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name"
+                               aria-describedby="floatingInputHelp" name="title"/>
+                        <label for="name">Judul</label>
                     </div>
                     <div class="form-input mt-3">
                         <textarea name="body" id="body" class="form-control"></textarea>

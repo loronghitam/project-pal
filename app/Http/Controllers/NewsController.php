@@ -71,7 +71,7 @@ class NewsController extends Controller
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public_html/images/berita/');
+                    $destination = public_path('images/berita/');
 
                     $news = News::create([
                         'title' => $request->title,
@@ -170,14 +170,14 @@ class NewsController extends Controller
                         $education = News::find($id);
                         $oldImage = $education->image;
                         if ($oldImage) {
-                            $pleaseRemove = base_path('public_html/images/berita/') . $oldImage;
+                            $pleaseRemove = public_path('images/berita/') . $oldImage;
                             if (file_exists($pleaseRemove)) {
                                 unlink($pleaseRemove);
                             }
                         }
                         $extension = $request->file('image')->getClientOriginalExtension();
                         $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                        $destination = base_path('public_html/images/berita/');
+                        $destination = public_path('images/berita/');
                         News::where('id', '=', $id)->update([
                             'image' => $image
                         ]);
@@ -218,7 +218,7 @@ class NewsController extends Controller
             }
             $oldImage = $event->image;
             if ($oldImage) {
-                $pleaseRemove = base_path('public_html/images/berita/') . $oldImage;
+                $pleaseRemove = public_path('images/berita/') . $oldImage;
 
                 if (file_exists($pleaseRemove)) {
                     unlink($pleaseRemove);

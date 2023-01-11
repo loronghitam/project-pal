@@ -91,7 +91,7 @@ class DonateController extends Controller
                 DB::transaction(function () use ($request) {
                     $extension = $request->file('image')->getClientOriginalExtension();
                     $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                    $destination = base_path('public/images/berita/');
+                    $destination = public_path('images/berita/');
 
                     $news = News::create([
                         'title' => $request->title,
@@ -190,7 +190,7 @@ class DonateController extends Controller
                     $event = Donate::where('id', '=', $id)->first();
                     $oldImage = $event->image;
                     if ($oldImage) {
-                        $pleaseRemove = base_path('public/images/donate/') . $oldImage;
+                        $pleaseRemove = public_path('images/donate/') . $oldImage;
 
                         if (file_exists($pleaseRemove)) {
                             unlink($pleaseRemove);
