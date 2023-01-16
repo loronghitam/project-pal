@@ -60,12 +60,10 @@
                                 <label for="state" class="form-label">New Password</label>
                                 <input class="form-control" type="password" id="state" name="password"/>
                             </div>
-
                             <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">Confirm New Password</label>
                                 <input class="form-control" type="password" id="state" name="password_confirmation"/>
                             </div>
-
                             <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">Password Saat Ini</label>
                                 <input class="form-control" type="password" id="state" name="passwordNow"/>

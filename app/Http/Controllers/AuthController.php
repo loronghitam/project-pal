@@ -287,9 +287,11 @@ class AuthController extends Controller
             $this->$request->validate([
                 'password' => 'confirmed|min:6',
             ]);
-            User::where('id', auth()->user()->id)->update([
-                'password' => Hash::make($request->password),
-            ]);
+            if ($request->password == $request->password_confirmation) {
+                User::where('id', auth()->user()->id)->update([
+                    'password' => Hash::make($request->password),
+                ]);
+            }
         }
         $validate = $request->validate([
             'username' => Rule::unique('users', 'username')->ignore(auth()->user()->id),
@@ -301,9 +303,8 @@ class AuthController extends Controller
             'username' => $request->username,
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->to('/user')->with('succes', 'Account Berhasil di update');
+        return redirect()->to('/dashboard')->with('succes', 'Account Berhasil di update');
     }
 }
