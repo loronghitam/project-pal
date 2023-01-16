@@ -40,9 +40,11 @@
                                     @endforeach
                                     <div class="col-md-9">
                                         <div class="blog_post">
-                                            <img src="{{asset('images/berita/'. $data->image)}}" alt="">
+                                            <a href="{{url('/berita/'. $data->slug)}}">
+                                                <img src="{{asset('images/berita/'. $data->image)}}" alt="">
+                                            </a>
                                             <div class="blog_details">
-                                                <a href="single-blog.html">
+                                                <a href="{{url('/berita/'. $data->slug)}}">
                                                     <h2>{{ $data->title }}</h2>
                                                 </a>
                                                 <p>{!! Str::limit($data->body, 250, '...') !!}</p>

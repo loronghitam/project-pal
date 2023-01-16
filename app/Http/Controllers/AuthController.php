@@ -43,7 +43,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $fieldType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'name';
+        $fieldType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         $data = [
             $fieldType => $request->username,
             'password' => $request->password,
