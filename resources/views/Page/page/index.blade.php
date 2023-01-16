@@ -32,7 +32,8 @@
                                 </div>
                                 <div class="col-lg-6 mt-3">
                                     <div class="banner-img">
-                                        <img class="img-fluid" src="{{asset ('images/program/'. $data->image)}}" alt="">
+                                        <img class="img-fluid owl-lazy" width=""
+                                             src="{{asset ('images/program/'. $data->image)}}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +104,8 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-product">
                                     <a href="{{url('/program/'. $data->slug)}}">
-                                        <img class="img-fluid" src="{{('images/program/'. $data->image)}}" alt="">
+                                        <img class="img-fluid owl-lazy" src="{{('images/program/'. $data->image)}}"
+                                             alt="">
                                     </a>
 
                                     <div class="product-details">
@@ -166,7 +168,8 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="single-product">
                                     <a href="{{url('berita/'. $data->slug)}}">
-                                        <img class="img-fluid" src="{{ asset('images/berita/'. $data->image) }}" alt="">
+                                        <img class="img-fluid owl-lazy"
+                                             src="{{ asset('images/berita/'. $data->image) }}" alt="">
                                     </a>
                                     <div class="product-details">
                                         <a href="{{url('berita/'. $data->slug)}}">
@@ -200,6 +203,7 @@
             items: 1,
             margin: 10,
             loop: true,
+            lazyLoad: true,
             autoplay: true,
             autoplayTimeout: 15000,
         });
@@ -213,6 +217,7 @@
         var owl2 = $('#dua');
         owl2.owlCarousel({
             items: 1,
+            lazyLoad: true,
             center: true,
         });
 
