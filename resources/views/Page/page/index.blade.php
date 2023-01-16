@@ -33,7 +33,7 @@
                                 <div class="col-lg-6 mt-3">
                                     <div class="banner-img">
                                         <img class="img-fluid owl-lazy" width=""
-                                             src="{{asset ('images/program/'. $data->image)}}" alt="">
+                                             data-src-retina="{{asset ('images/program/'. $data->image)}}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +104,8 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-product">
                                     <a href="{{url('/program/'. $data->slug)}}">
-                                        <img class="img-fluid owl-lazy" src="{{('images/program/'. $data->image)}}"
+                                        <img class="img-fluid owl-lazy"
+                                             data-src-retina="{{('images/program/'. $data->image)}}"
                                              alt="">
                                     </a>
 
@@ -169,7 +170,7 @@
                                 <div class="single-product">
                                     <a href="{{url('berita/'. $data->slug)}}">
                                         <img class="img-fluid owl-lazy"
-                                             src="{{ asset('images/berita/'. $data->image) }}" alt="">
+                                             data-src-retina="{{ asset('images/berita/'. $data->image) }}" alt="">
                                     </a>
                                     <div class="product-details">
                                         <a href="{{url('berita/'. $data->slug)}}">
