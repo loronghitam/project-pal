@@ -1,3 +1,8 @@
+@php
+    use Carbon\Carbon;
+    use Carbon\CarbonInterface;
+@endphp
+
 @extends('Page.layout.app')
 
 @push('title')
@@ -34,6 +39,11 @@
                                         <a href="{{url('/program/'. $data->slug)}}">
                                             <h6 id="title">{{$data->title}}</h6>
                                         </a>
+                                        @php
+                                            $end = Carbon::parse($data->end_program)->diffForHumans(Carbon::now(),
+                                            ['syntax' => CarbonInterface::DIFF_RELATIVE_TO_NOW, 'parts' => 3]);
+                                        @endphp
+                                        <p>{{ $end }}</p>
                                         <div class="price">
                                             <h6>Terkumpul : Rp. {{ number_format($data->collected) }}</h6>
                                             <div class="percentage">

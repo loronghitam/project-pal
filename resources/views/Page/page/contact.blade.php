@@ -10,7 +10,7 @@
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
                 <div class="col-first">
-                    <h1>Contact</h1>
+                    <h1>Profile</h1>
                 </div>
             </div>
         </div>
@@ -20,8 +20,57 @@
     <!--================Contact Area =================-->
     <section class="contact_area section_gap_bottom">
         <div class="container">
-            <div id="mapBox" class="mapBox" data-lat="-6.91419555540468" data-lon="107.78049249773242">
+            <div class="section_gap">
+                <div class="section-top-border">
+                    <div class="row">
+                        <div class="col-md-3 align-self-center text-center">
+                            <h3 class="mb-30">VISI</h3>
+                        </div>
+                        <div class="col-md-9 mt-sm-20 text-justify">
+                            <h6>Dalam penyelenggaraan pelayanan kesehatan di wilayah Kecamatan Jatinangor
+                                lebihdititikberatkanpada upaya peningkatan kesehatan (promotif), pencegahan penyakit
+                                (preventif), penyembuhanpenyakit(kuratif) serta pemulihan kesehatan (rehabilitatif),
+                                yang dilaksanakan secara bersama-samaantaraPemerintah, sekolah dan masyarakat secara
+                                menyeluruh, terpadu dan berkesinambungan. Little Ambulance hadir untuk memudahkan proses
+                                tersebut di atas, untuk melayani kebutuhanmasyarakat,khususnya anak sekolah yang
+                                memerlukan unit ambulance untuk menuju lokasi layanankesehatan.
+                            </h6>
+                        </div>
+
+                        <div class="section-top-border text-right mt-3">
+                            <div class="row">
+                                <div class="col-md-9 text-justify">
+                                    <h6>
+                                        1. Maksud dan Tujuan Penyelenggaraan Pelayanan unit ambulance bagi
+                                        Masyarakat,
+                                        khususnyaanaksekolahdiKecamatan Jatinangor, meliputi pelayanan di Puskesmas baik
+                                        di Puskesmas Rawat Jalan, Puskesmas RawatInap,Puskesmas Rawat Inap Standar,
+                                        Puskesmas Rawat Inap Plus, Puskesmas Pembantu (Pustu), PuskesmasPembantuMelayani
+                                        Gawat Darurat (Pustu Gadar), Pondok Kesehatan Desa (Ponkesdes), Pondok
+                                        BersalinDesa(Polindes)maupun Puskesmas Keliling (Pusling), melalui upaya
+                                        kesehatan untuk meningkatkan kesadaran, kemauandankemampuan hidup sehat bagi
+                                        setiap orang sehingga terwujud derajat kesehatan masyarakat
+                                        yangoptimaltanpamembedakan status sosialnya;
+                                    </h6>
+                                    <h6>
+                                        2. Jenis Pelayanan Kepada Masyarakat adalah pengantaran GRATIS
+                                        sampai di tempat
+                                        layanan kesehatan yang direkomendasi.
+                                    </h6>
+                                    <h6>
+                                        3. Pendistribusian oksigen tabung gratis
+                                        untuk masyarakat.
+                                    </h6>
+                                </div>
+                                <div class="col-md-3 align-self-center text-center">
+                                    <h3>Maksud dan Tujuan</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div id="mapBox" class="mapBox" data-lat="-6.91419555540468" data-lon="107.78049249773242"></div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="contact_info">

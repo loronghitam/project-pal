@@ -1,4 +1,7 @@
-@php use Carbon\Carbon; @endphp
+@php
+    use Carbon\Carbon;
+    use Carbon\CarbonInterface;
+@endphp
 @extends('Page.layout.app')
 
 @push('title')
@@ -33,6 +36,11 @@
                 <div class="col-lg-5 offset-lg-1">
                     <div class="s_product_text">
                         <h3>{{ $program->title }}</h3>
+                        @php
+                            $end = Carbon::parse($program->end_program)->diffForHumans(Carbon::now(),
+                            ['syntax' => CarbonInterface::DIFF_RELATIVE_TO_NOW, 'parts' => 3]);
+                        @endphp
+                        <h6>{{ $end }}</h6>
                         <ul class="list">
                             <div class="price">
                                 <h3>Terkumpul : Rp. {{ number_format($program->collected) }}</h3>
