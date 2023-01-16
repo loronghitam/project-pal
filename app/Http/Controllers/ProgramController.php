@@ -209,15 +209,14 @@ class ProgramController extends Controller
                             if (file_exists($pleaseRemove)) {
                                 unlink($pleaseRemove);
                             }
-                        } else {
-                            $extension = $request->file('image')->getClientOriginalExtension();
-                            $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
-                            $destination = public_path('images/program/');
-                            Program::where('id', '=', $id)->update([
-                                'image' => $image
-                            ]);
-                            $request->file('image')->move($destination, $image);
                         }
+                        $extension = $request->file('image')->getClientOriginalExtension();
+                        $image = strtotime(date('Y-m-d H:i:s')) . '.' . $extension;
+                        $destination = public_path('images/program/');
+                        Program::where('id', '=', $id)->update([
+                            'image' => $image
+                        ]);
+                        $request->file('image')->move($destination, $image);
                     }
                 });
 

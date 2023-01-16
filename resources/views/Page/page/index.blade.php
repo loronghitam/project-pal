@@ -90,10 +90,10 @@
                         <div class="col-lg-6 text-center">
                             <div class="section-title">
                                 <h1>Program</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore
-                                    magna aliqua.</p>
+                                <p>
+                                    Berikut ini adalah program-program donasi yang sedang berjalan di Little Ambulance.
+                                    Setiap rupiah yang anda sumbangkan, sangat berarti bagi mereka yang membutuhkan.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -156,10 +156,7 @@
                         <div class="col-lg-6 text-center">
                             <div class="section-title">
                                 <h1>Berita</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et
-                                    dolore
-                                    magna aliqua.</p>
+                                <p>Berita-berita terbaru mengenai peristiwa yang terjadi di kehidupan sehari-hari.</p>
                             </div>
                         </div>
                     </div>

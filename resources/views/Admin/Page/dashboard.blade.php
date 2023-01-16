@@ -13,7 +13,7 @@
                                 <h5 class="card-title text-primary">Selamat
                                     datang {{ Str::title(auth()->user()->name) }}</h5>
                                 <p class="mb-4">
-                                    Semoga lelah menjadi lilah
+                                    Semoga lelah menjadi lillah
                                 </p>
                             </div>
                         </div>

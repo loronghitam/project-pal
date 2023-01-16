@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -115,7 +116,6 @@ class NewsController extends Controller
             return Response::json($data);
         }
         $data = News::where('user_id', '=', auth()->user()->id)->orderBy('id', 'desc')->get();
-
         return datatables()
             ->of($data)
             ->editColumn('updated_at', function ($date) {
