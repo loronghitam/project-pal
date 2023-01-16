@@ -26,7 +26,7 @@
                                         <div class="add-bag d-flex align-items-center">
                                             <a class="add-btn" onclick="create()"><span
                                                     class="lnr lnr-cross"></span></a>
-                                            <span class="add-text text-uppercase">Donate</span>
+                                            <span class="add-text text-uppercase">Donasi</span>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@
                                         </div>
                                         <div class="prd-bottom">
                                             @if($data->status == 'Aktif')
-                                                <a class="social-info" onclick="create()">
+                                                <a class="social-info bg-black" onclick="create()">
                                                     <span class="lnr lnr-heart"></span>
                                                     <p class="hover-text">Donasi</p>
                                                 </a>

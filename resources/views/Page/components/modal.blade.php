@@ -7,10 +7,13 @@
                         <h3 class="mb-30">Petunjuk Pembayaran</h3>
                         <div class="row">
                             <ul class="ordered-list">
-                                <li>Isi data diri</li>
-                                <li>Pilih pembayaran bank</li>
-                                <li>Transfer ke rekening xxx-xxx-xxx atas nama Little Ambulance</li>
-                                <li>Upload bukti pembayaran</li>
+                                <li class="text-dark">Isi data diri</li>
+                                <li class="text-dark">Pilih pembayaran bank</li>
+                                <li class="text-dark">Transfer ke <b class="text-dark">BSI 7197976432</b> a/n: <b
+                                        class="text-dark">Little
+                                        Ambulance</b>
+                                </li>
+                                <li class="text-dark">Upload bukti pembayaran</li>
                             </ul>
                         </div>
                     </div>
@@ -18,28 +21,28 @@
                 <div id="createError" class="text-center"></div>
                 <div class="modal-body">
                     <div class="form-floating">
-                        <label for="name">Name</label>
+                        <label for="name" class="text-dark">Nama</label>
                         <input type="text" class="form-control" id="name"
                                aria-describedby="floatingInputHelp" name="name"/>
                     </div>
                     <div class="form-input mt-3">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label for="exampleInputEmail1" class="text-dark">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                                name="email">
                     </div>
                     <div class="form-input mt-3">
-                        <label for="phone">Phone</label>
+                        <label for="phone" class="text-dark">No Hp</label>
                         <input type="email" class="form-control" id="phone" aria-describedby="emailHelp"
-                               name="phone">
+                               name="phone" max="12">
                     </div>
                     <div class="form-input mt-3">
-                        <label for="donate">Jumlah Donasi</label>
+                        <label for="donate" class="text-dark">Jumlah Donasi</label>
                         <input type="text" class="form-control" id="uang" aria-describedby="emailHelp"
                                name="amount">
                     </div>
 
                     <div>
-                        <legend for="donate" class="mt-3">Nomber Rekening</legend>
+                        <legend for="donate" class="mt-3 text-dark">Metode Pembayaran</legend>
                         <div class="form-check form-check-inline mt-3">
                             <input class="form-check-input" type="radio" name="rekening" id="exampleRadios1"
                                    value="BRI">
@@ -73,7 +76,7 @@
                             <i class="fa fa-bookmark" aria-hidden="true"></i>
                         </div>
                         <div class="form-select" id="default-select">
-                            <select id="program" name="program">
+                            <select id="program" name="program" class="text-dark">
                                 <option value="" selected disabled>Pilih Program</option>
                                 @foreach($program as $data)
                                     <option value="{{$data->id}}">{{ $data->title}}</option>

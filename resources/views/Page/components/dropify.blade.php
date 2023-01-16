@@ -5,10 +5,10 @@
 <link rel="stylesheet" type="text/css" href="https://jeremyfagis.github.io/dropify/dist/css/dropify.min.css">
 
 <script>
-    $(function() {
+    $(function () {
         $('#createImage').dropify({
             messages: {
-                'default': 'Masukan bukti pembayaran',
+                'default': 'Bukti pembayaran',
                 'replace': 'Drag and drop atau click untuk mengganti',
                 'remove': 'Remove',
                 'error': 'Ooops, something wrong happended.'

@@ -24,43 +24,28 @@
                 <div class="section-top-border">
                     <div class="row">
                         <div class="col-md-3 align-self-center text-center">
-                            <h3 class="mb-30">VISI</h3>
+                            <h3 class="mb-30">ABOUT</h3>
                         </div>
-                        <div class="col-md-9 mt-sm-20 text-justify">
-                            <h6>Dalam penyelenggaraan pelayanan kesehatan di wilayah Kecamatan Jatinangor
-                                lebihdititikberatkanpada upaya peningkatan kesehatan (promotif), pencegahan penyakit
-                                (preventif), penyembuhanpenyakit(kuratif) serta pemulihan kesehatan (rehabilitatif),
-                                yang dilaksanakan secara bersama-samaantaraPemerintah, sekolah dan masyarakat secara
-                                menyeluruh, terpadu dan berkesinambungan. Little Ambulance hadir untuk memudahkan proses
-                                tersebut di atas, untuk melayani kebutuhanmasyarakat,khususnya anak sekolah yang
-                                memerlukan unit ambulance untuk menuju lokasi layanankesehatan.
-                            </h6>
+                        <div class="col-md-9 mt-sm-20 text-center text-dark">
+                            <p>
+                                Little ambulance hadir untuk mempermudah penyelenggaraan pelayanan kesehatan di wilayah
+                                Kecamatan Jatinangor yang lebih dititikberatkan pada upaya peningkatan kesehatan
+                                (promotif), pencegahan penyakit (preventif), penyembuhan penyakit(kuratif) serta
+                                pemulihan kesehatan (rehabilitatif), yang dilaksanakan secara bersama-sama antara
+                                Pemerintah, sekolah dan masyarakat secara menyeluruh, terpadu dan berkesinambungan.
+                            </p>
                         </div>
 
                         <div class="section-top-border text-right mt-3">
                             <div class="row">
-                                <div class="col-md-9 text-justify">
-                                    <h6>
-                                        1. Maksud dan Tujuan Penyelenggaraan Pelayanan unit ambulance bagi
-                                        Masyarakat,
-                                        khususnyaanaksekolahdiKecamatan Jatinangor, meliputi pelayanan di Puskesmas baik
-                                        di Puskesmas Rawat Jalan, Puskesmas RawatInap,Puskesmas Rawat Inap Standar,
-                                        Puskesmas Rawat Inap Plus, Puskesmas Pembantu (Pustu), PuskesmasPembantuMelayani
-                                        Gawat Darurat (Pustu Gadar), Pondok Kesehatan Desa (Ponkesdes), Pondok
-                                        BersalinDesa(Polindes)maupun Puskesmas Keliling (Pusling), melalui upaya
-                                        kesehatan untuk meningkatkan kesadaran, kemauandankemampuan hidup sehat bagi
-                                        setiap orang sehingga terwujud derajat kesehatan masyarakat
-                                        yangoptimaltanpamembedakan status sosialnya;
-                                    </h6>
-                                    <h6>
-                                        2. Jenis Pelayanan Kepada Masyarakat adalah pengantaran GRATIS
-                                        sampai di tempat
-                                        layanan kesehatan yang direkomendasi.
-                                    </h6>
-                                    <h6>
-                                        3. Pendistribusian oksigen tabung gratis
-                                        untuk masyarakat.
-                                    </h6>
+                                <div class="col-md-9 text-center text-dark">
+                                    <p>
+                                        Little ambulance bertujuan untuk meningkatkan kesadaran, kemauan dan kemampuan
+                                        hidup sehat bagi setiap orang sehingga terwujud derajat kesehatan masyarakat
+                                        yang optimal tanpa membedakan status sosialnya. Little ambulance berupaya untuk
+                                        memudahkan proses tersebut, untuk melayani kebutuhan masyarakat, khususnya
+                                        masyarakat yang memerlukan unit ambulance untuk menuju lokasi layanan kesehatan.
+                                    </p>
                                 </div>
                                 <div class="col-md-3 align-self-center text-center">
                                     <h3>Maksud dan Tujuan</h3>

@@ -1,4 +1,4 @@
-@php use Carbon\Carbon; @endphp
+@php use Carbon\Carbon;use Illuminate\Support\Str; @endphp
 @extends('Page.layout.app')
 
 @push('title')
@@ -45,7 +45,7 @@
                                                 <a href="single-blog.html">
                                                     <h2>{{ $data->title }}</h2>
                                                 </a>
-                                                <p>{!! $data->body !!}</p>
+                                                <p>{!! Str::limit($data->body, 250, '...') !!}</p>
                                                 <a href="{{url('/berita/'. $data->slug)}}" class="white_bg_btn">Baca
                                                     Selengkapnya</a>
                                             </div>

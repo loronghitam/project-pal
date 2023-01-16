@@ -26,13 +26,7 @@ class DonateController extends Controller
     {
         $amount = (int)str_replace(',', '', $request->amount);
 
-        if ($amount < 50000) {
-            $json = [
-                'msg' => 'Minimal nominal Rp.50.000',
-                'status' => false
-            ];
-            return Response::json($json);
-        } elseif ($request->name == NULL) {
+        if ($request->name == NULL) {
             $json = [
                 'msg' => 'Mohon berikan nama',
                 'status' => false
@@ -52,6 +46,12 @@ class DonateController extends Controller
                 'msg' => 'Mohon berikan nomer telpon',
                 'status' => false
             ];
+        } elseif ($amount < 10000) {
+            $json = [
+                'msg' => 'Minimal nominal Rp.10.000',
+                'status' => false
+            ];
+            return Response::json($json);
         } elseif ($request->image == NULL) {
             $json = [
                 'msg' => 'Mohon Isikan bukti pembayaran',

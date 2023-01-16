@@ -1,12 +1,12 @@
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="single-footer-widget">
                 <h6>About Us</h6>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    dolore
-                    magna aliqua.
+                    Little Ambulance adalah sebuah lembaga kemanusiaan yang merupakan bagian dari Yayasan Kemanusiaan
+                    Little Project. Berawal pada tahun 2022 dari sebuah tim ambulance gratis, kini little ambulance
+                    menambah program lainnya yang berfokus kepada kebutuhan kesehatan masyarakat.
                 </p>
             </div>
         </div>

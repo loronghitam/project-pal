@@ -60,7 +60,7 @@
                         <p>{{ $program->body }}</p>
                         @if($program->status == 'Aktif')
                             <div class="card_area d-flex align-items-center">
-                                <a class="primary-btn" onclick="create()">Donasi</a>
+                                <a class="primary-btn text-white" onclick="create()">Donasi</a>
                             </div>
                         @else
                             <div class="card_area d-flex align-items-center">
