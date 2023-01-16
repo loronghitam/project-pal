@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Yajra\DataTables\Exceptions\Exception;
-use function MongoDB\BSON\toJSON;
 
 class ProgramController extends Controller
 {
@@ -144,7 +143,7 @@ class ProgramController extends Controller
         return datatables()
             ->of($data)
             ->editColumn('updated_at', function ($date) {
-                return $date->updated_at ? with(new Carbon($date->updated_at))->diffForHumans() : '';
+                return $date->created_at->format('d-M-Y');
             })
             ->addIndexColumn()
             ->addColumn('image', function ($row) {

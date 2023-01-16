@@ -175,13 +175,9 @@
                                         <a href="{{url('berita/'. $data->slug)}}">
                                             <h6>{{ $data->title }}</h6>
                                         </a>
-                                        <div class="price">
-                                            <h6>$150.00</h6>
-                                            <h6 class="l-through">$210.00</h6>
-                                        </div>
                                         <div class="prd-bottom">
                                             <a href="{{url('berita/'. $data->slug)}}" class="social-info">
-                                                <span class="lnr lnr-move"></span>
+                                                <span class="fa fa-eye" aria-hidden="true"></span>
                                                 <p class="hover-text">view more</p>
                                             </a>
                                         </div>
