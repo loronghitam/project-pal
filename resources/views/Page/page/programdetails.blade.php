@@ -57,7 +57,7 @@
                                 <h3>Target : Rp. {{ number_format($program->funding) }}</h3>
                             </div>
                         </ul>
-                        <p>{{ $program->body }}</p>
+                        <p>{!! $program->body !!}</p>
                         @if($program->status == 'Aktif')
                             <div class="card_area d-flex align-items-center">
                                 <a class="primary-btn text-white" onclick="create()">Donasi</a>
