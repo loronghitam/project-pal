@@ -24,7 +24,9 @@ class BeritaController extends Controller
             ->where('slug', '=', $slug)->first();
         $prev = News::where('id', '<', $berita->id)->orderBy('id', 'desc')->first();
         $next = News::where('id', '>', $berita->id)->orderBy('id', 'asc')->first();
+        $beritaNews = News::orderBy('id', 'desc')->get()->take(4);
 
-        return view('Page.page.blogdetail', ['berita' => $berita, 'next' => $next, 'prev' => $prev]);
+
+        return view('Page.page.blogdetail', ['berita' => $berita, 'next' => $next, 'prev' => $prev, 'news' => $beritaNews]);
     }
 }
