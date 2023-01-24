@@ -36,10 +36,14 @@
                 <div class="col-lg-5 offset-lg-1">
                     <div class="s_product_text">
                         <h3>{{ $program->title }}</h3>
-                        @php
-                            $end = Carbon::parse($program->end_program)->diffInDays(Carbon::now());
-                        @endphp
-                        <h6 class="text-dark"> Sisa {{ $end }} Hari </h6>
+                        @if(now()->toDateString() < $program->end_program)
+                            @php
+                                $end = Carbon::parse($program->end_program)->diffInDays(Carbon::now());
+                            @endphp
+                            <h6 class="text-dark"> Sisa {{ $end }} Hari </h6>
+                        @else
+                            <h6 class="text-dark"> Program Berakhir </h6>
+                        @endif
                         <ul class="list">
                             <div class="price">
                                 <h3>Terkumpul : Rp. {{ number_format($program->collected) }}</h3>

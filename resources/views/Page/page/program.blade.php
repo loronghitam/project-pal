@@ -39,10 +39,14 @@
                                         <a href="{{url('/program/'. $data->slug)}}">
                                             <h6 id="title">{{$data->title}}</h6>
                                         </a>
-                                        @php
-                                            $end = Carbon::parse($data->end_program)->diffInDays(Carbon::now());
-                                        @endphp
-                                        <p class="text-dark"> Sisa {{ $end }} Hari </p>
+                                        @if(now()->toDateString() < $data->end_program)
+                                            @php
+                                                $end = Carbon::parse($data->end_program)->diffInDays(Carbon::now());
+                                            @endphp
+                                            <p class="text-dark"> Sisa {{ $end }} Hari </p>
+                                        @else
+                                            <p class="text-dark"> Program Berakhir </p>
+                                        @endif
                                         <div class="price">
                                             <h6>Terkumpul : Rp. {{ number_format($data->collected) }}</h6>
                                             <div class="percentage">

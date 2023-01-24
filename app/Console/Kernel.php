@@ -8,6 +8,8 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+    protected $commands = ['App\Console\Commands\UpdateStatus'];
+
     /**
      * Define the application's command schedule.
      *
@@ -16,16 +18,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function () {
-            $program = Program::all();
-            foreach ($program as $data) {
-                if ($data->end_program == now()->toDateString() && $data->status != 'Non Aktif') {
-                    Program::where('id', '=', $data->id)->update([
-                        'status' => 'Non Aktif'
-                    ]);
-                }
-            }
-        })->everyMinute();
+        $schedule->command("update:status")->everyMinute();
     }
 
     /**

@@ -113,9 +113,12 @@
                                         <a href="{{url('/program/'. $data->slug)}}">
                                             <h5>{{ $data->title }}</h5>
                                         </a>
-                                        @php
-                                            $end = Carbon::parse($data->end_program)->diffInDays(Carbon::now());
-                                        @endphp
+                                        {{ dd($data->end_program) }}
+                                        {{ dd($data->end_program < now()->toDateString()) }}
+
+                                        {{--                                    @php--}}
+                                        {{--                                        $end = Carbon::parse($data->end_program)->diffInDays(Carbon::now());--}}
+                                        {{--                                    @endphp--}}
                                         <p class="text-dark"> Sisa {{ $end }} Hari </p>
 
                                         <div class="price">
