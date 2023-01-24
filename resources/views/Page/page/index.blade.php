@@ -114,10 +114,9 @@
                                             <h5>{{ $data->title }}</h5>
                                         </a>
                                         @php
-                                            $end = Carbon::parse($data->end_program)->diffForHumans(Carbon::now(),
-                                            ['syntax' => CarbonInterface::DIFF_RELATIVE_TO_NOW, 'parts' => 3]);
+                                            $end = Carbon::parse($data->end_program)->diffInDays(Carbon::now());
                                         @endphp
-                                        <p>{{ $end }}</p>
+                                        <p class="text-dark"> Sisa {{ $end }} Hari </p>
 
                                         <div class="price">
                                             <h6>Terkumpul : Rp. {{ number_format($data->collected) }}</h6>
@@ -166,7 +165,7 @@
                     <div class="row">
                         @foreach($berita as $data)
                             <!-- single product -->
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-4 col-md-6">
                                 <div class="single-product">
                                     <a href="{{url('berita/'. $data->slug)}}">
                                         <img class="img-fluid"
@@ -219,7 +218,6 @@
             items: 1,
             center: true,
         });
-
     </script>
 @endpush
 

@@ -13,8 +13,8 @@
                 <div class="col-first">
                     <h1>Blog Page</h1>
                     <nav class="d-flex align-items-center">
-                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="category.html">Blog</a>
+                        <a href="{{ url("/") }}">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="{{ url("/berita") }}">Blog</a>
                     </nav>
                 </div>
             </div>
@@ -23,28 +23,26 @@
     <!-- End Banner Area -->
 
     <!--================Blog Area =================-->
-    <section class="blog_area single-post-area section_gap">
+    <section class=" blog_area single-post-area section_gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 posts-list">
                     <div class="single-post row">
                         <div class="col-lg-12">
                             <div class="feature-img">
-                                <img class="img-fluid" src="{{ asset('images/berita/'. $berita->image) }}" alt="">
+                                <img class="img-fluid"
+                                     src="{{ asset('images/berita/'. $berita->image) }}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-3  col-md-3">
                             <div class="blog_info text-right">
                                 <ul class="blog_meta list">
-                                    <li><a href="#">{{ $berita->name }}<i class="lnr lnr-user"></i></a></li>
-                                    <li><a href="#">{{ Carbon::parse($berita->created_at)->diffForHumans() }}<i
+                                    <li><a href="#">{{ $berita->name }}<i class="lnr lnr-user"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">{{ Carbon::parse($berita->created_at)->diffForHumans() }}
+                                            <i
                                                 class="lnr lnr-calendar-full"></i></a></li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -59,9 +57,10 @@
                                 <div
                                     class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                                     <div class="thumb">
-                                        <a href="{{ url('/berita/'. $prev->slug) }}"><img class="img-fluid"
-                                                                                          src="{{asset('assets/landingpage/img/blog/prev.jpg')}}"
-                                                                                          alt=""></a>
+                                        <a href="{{ url('/berita/'. $prev->slug) }}"><img
+                                                class="img-fluid"
+                                                src="{{asset('assets/landingpage/img/blog/prev.jpg')}}"
+                                                alt=""></a>
                                     </div>
                                     <div class="arrow">
                                         <a href="{{ url('/berita/'. $prev->slug) }}"><span
@@ -106,7 +105,8 @@
                             <h3 class="widget_title">Berita Terbaru</h3>
                             @foreach($news as $data)
                                 <div class="media post_item">
-                                    <img src="{{ asset('images/berita/'. $data->image)}}" width="100px" alt="post">
+                                    <img src="{{ asset('images/berita/'. $data->image)}}" width="100px"
+                                         alt="post">
                                     <div class="media-body">
                                         <a href="blog-details.html">
                                             <h3>{{ $data->title }}</h3>

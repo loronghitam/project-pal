@@ -23,10 +23,10 @@
             <div class="section_gap">
                 <div class="section-top-border">
                     <div class="row">
-                        <div class="col-md-3 align-self-center text-center">
+                        <div class="col-md-12 text-center">
                             <h3 class="mb-30">ABOUT</h3>
                         </div>
-                        <div class="col-md-9 mt-sm-20 text-center text-dark">
+                        <div class="col-md-12 mt-sm-20 text-center text-dark">
                             <p>
                                 Little ambulance hadir untuk mempermudah penyelenggaraan pelayanan kesehatan di wilayah
                                 Kecamatan Jatinangor yang lebih dititikberatkan pada upaya peningkatan kesehatan
@@ -38,7 +38,10 @@
 
                         <div class="section-top-border text-right mt-3">
                             <div class="row">
-                                <div class="col-md-9 text-center text-dark">
+                                <div class="col-md-12 text-center">
+                                    <h3>Maksud dan Tujuan</h3>
+                                </div>
+                                <div class="col-md-12 text-center text-dark">
                                     <p>
                                         Little ambulance bertujuan untuk meningkatkan kesadaran, kemauan dan kemampuan
                                         hidup sehat bagi setiap orang sehingga terwujud derajat kesehatan masyarakat
@@ -47,15 +50,18 @@
                                         masyarakat yang memerlukan unit ambulance untuk menuju lokasi layanan kesehatan.
                                     </p>
                                 </div>
-                                <div class="col-md-3 align-self-center text-center">
-                                    <h3>Maksud dan Tujuan</h3>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="mapBox" class="mapBox" data-lat="-6.91419555540468" data-lon="107.78049249773242"></div>
+            <div class="mapouter embed-responsive embed-responsive-21by9 mb-5">
+                <div class="gmap_canvas">
+                    <iframe clas="embed-responsive-item" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=little%20ambulance&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="contact_info">
@@ -77,7 +83,7 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm"
+                    <form class="row contact_form" action="#" id="contactForm"
                           novalidate="novalidate">
                         <div class="col-md-6">
                             <div class="form-group">

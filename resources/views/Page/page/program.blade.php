@@ -40,10 +40,9 @@
                                             <h6 id="title">{{$data->title}}</h6>
                                         </a>
                                         @php
-                                            $end = Carbon::parse($data->end_program)->diffForHumans(Carbon::now(),
-                                            ['syntax' => CarbonInterface::DIFF_RELATIVE_TO_NOW, 'parts' => 3]);
+                                            $end = Carbon::parse($data->end_program)->diffInDays(Carbon::now());
                                         @endphp
-                                        <p>{{ $end }}</p>
+                                        <p class="text-dark"> Sisa {{ $end }} Hari </p>
                                         <div class="price">
                                             <h6>Terkumpul : Rp. {{ number_format($data->collected) }}</h6>
                                             <div class="percentage">

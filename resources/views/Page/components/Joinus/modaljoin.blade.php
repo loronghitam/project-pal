@@ -6,23 +6,26 @@
                     <h5 class="modal-titlea" id="exampleModalLabel4">Registrasi Volinteer</h5>
                 </div>
                 <div id="createError" class="text-center"></div>
-                <div class="modal-body">
+                <div class="modal-body text-dark">
                     <div class="form-floating">
-                        <label for="name">Name</label>
+                        <label for="name">Nama</label>
                         <input type="hidden" name="program" value="" id="program"/>
-                        <input type="text" class="form-control" id="name"  aria-describedby="floatingInputHelp" name="name"/>
+                        <input type="text" class="form-control" id="name" aria-describedby="floatingInputHelp"
+                               name="name"/>
                     </div>
                     <div class="form-input mt-3">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                               name="email">
                     </div>
                     <div class="form-input mt-3">
-                        <label for="phone">Phone</label>
+                        <label for="phone">No Hp</label>
                         <input type="email" class="form-control" id="phone" name="phone">
                     </div>
                     <div class="form-input mt-3">
                         <label for="donate">Motivasi</label>
-                        <textarea class="form-control" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" name="motivation"></textarea>
+                        <textarea class="form-control" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder = 'Message'" name="motivation"></textarea>
                     </div>
 
 

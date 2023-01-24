@@ -12,9 +12,8 @@ class IndexController extends Controller
     public function index()
     {
         $main = Program::where('prioritas', '=', 'Iya')->where('status', '=', 'Aktif')->orderBy('id', 'desc')->get();
-        $program = Program::where('status', '=', 'Aktif')->orderBy('id', 'desc')->get()->take(8);
-        $berita = News::orderBy('id', 'desc')->get()->take(5);
-
+        $program = Program::where('status', '=', 'Aktif')->orderBy('id', 'desc')->get()->take(6);
+        $berita = News::orderBy('id', 'desc')->get()->take(6);
         return view('Page.page.index', ['main' => $main, 'program' => $program, 'berita' => $berita]);
     }
 }

@@ -46,6 +46,10 @@
                                 </div>
                             </div>
                         @endforeach
+
+                    </div>
+                    <div class="align-content-center">
+                        {{ $bergabung->links() }}
                     </div>
                 </div>
             </div>

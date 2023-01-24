@@ -37,10 +37,9 @@
                     <div class="s_product_text">
                         <h3>{{ $program->title }}</h3>
                         @php
-                            $end = Carbon::parse($program->end_program)->diffForHumans(Carbon::now(),
-                            ['syntax' => CarbonInterface::DIFF_RELATIVE_TO_NOW, 'parts' => 3]);
+                            $end = Carbon::parse($program->end_program)->diffInDays(Carbon::now());
                         @endphp
-                        <h6>{{ $end }}</h6>
+                        <h6 class="text-dark"> Sisa {{ $end }} Hari </h6>
                         <ul class="list">
                             <div class="price">
                                 <h3>Terkumpul : Rp. {{ number_format($program->collected) }}</h3>
@@ -103,7 +102,7 @@
                                             <div class="media-body">
                                                 <h4>{{$data->name}}</h4>
                                                 <h5>{{ Carbon::parse($data->created_at) }}</h5>
-                                                <a class="reply_btn">Rp. {{ $data->amount }}</a>
+                                                <a class="reply_btn">Rp. {{ number_format($data->amount) }}</a>
                                             </div>
                                         </div>
                                         <p>Terima kasih telah berdonasi</p>

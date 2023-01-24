@@ -66,7 +66,7 @@
                                 <div class="media post_item">
                                     <img src="{{ asset('images/berita/'. $data->image)}}" width="100px" alt="post">
                                     <div class="media-body">
-                                        <a href="blog-details.html">
+                                        <a href="{{url('/berita/'. $data->slug)}}">
                                             <h3>{{ $data->title }}</h3>
                                         </a>
                                         <p>{{ Carbon::parse($data->created_at)->diffForHumans() }}</p>

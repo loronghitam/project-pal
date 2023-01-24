@@ -14,6 +14,6 @@ class JoinUsSeeder extends Seeder
      */
     public function run(): void
     {
-        JoinUs::factory(5)->create();
+        JoinUs::factory(20)->create();
     }
 }

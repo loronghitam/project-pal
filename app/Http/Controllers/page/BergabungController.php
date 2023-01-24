@@ -18,7 +18,7 @@ class BergabungController extends Controller
 {
     public function bergabung()
     {
-        $data = JoinUs::orderBy('id', 'desc')->get();
+        $data = JoinUs::orderBy('id', 'desc')->paginate(6);
 
         return view('Page.page.bergabung', ['bergabung' => $data]);
     }

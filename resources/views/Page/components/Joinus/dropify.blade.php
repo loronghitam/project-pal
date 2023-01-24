@@ -5,13 +5,13 @@
 <link rel="stylesheet" type="text/css" href="https://jeremyfagis.github.io/dropify/dist/css/dropify.min.css">
 
 <script>
-    $(function() {
+    $(function () {
         $('#createImage').dropify({
             messages: {
-                'default': 'Masukan CV anda',
+                'default': 'Masukan CV atau Resume Anda',
                 'replace': 'Drag and drop atau click untuk mengganti',
                 'remove': 'Remove',
-                'error': 'Ooops, something wrong happended.'
+                'error': 'File yang dimasukan hanya pdf atau word saja'
             }
         });
         $('.dropify-clear').click();

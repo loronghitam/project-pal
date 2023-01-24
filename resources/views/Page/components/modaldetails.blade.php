@@ -89,7 +89,7 @@
 
                     <div class="form-group mt-3">
                         <input type="file" id="createImage" name="image" data-show-loader="false"
-                               class="form-control" required data-allowed-file-extensions="jpg png"
+                               class="form-control" required data-allowed-file-extensions="pdf word"
                                data-max-file-size-preview="3M" data-max-file-size="3M">
                     </div>
 
