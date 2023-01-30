@@ -38,13 +38,13 @@
                 <div data-i18n="Basic">Program</div>
             </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item {{ (request()->is('donates*')) ? 'active' : '' }}">
             <a href="{{url('donates')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Transaksi Donasi</div>
             </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item {{ (request()->is('report*')) ? 'active' : '' }}">
             <a href="{{url('report')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Laporan Transaksi Donasi</div>

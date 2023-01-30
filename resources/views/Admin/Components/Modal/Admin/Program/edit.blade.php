@@ -7,54 +7,102 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="errors" class="text-center"></div>
+                @role('SuperAdmin')
                 <div class="modal-body">
                     <div class="form-floating">
                         <input type="text" class="form-control" id="title-edit" placeholder="John Doe"
-                               aria-describedby="floatingInputHelp" name="title"/>
+                               aria-describedby="floatingInputHelp" name="title" readonly/>
                         <label for="name">Judul</label>
                     </div>
 
                     <div class="form-floating mt-3">
                         <input type="number" class="form-control" id="funding-edit" placeholder="Rp 100.000"
-                               aria-describedby="floatingInputHelp" name="funding"/>
+                               aria-describedby="floatingInputHelp" name="funding" readonly/>
                         <label for="name">Target</label>
                     </div>
 
                     <div class="form-floating mt-3">
                         <input type="date" class="form-control" id="end_program-edit"
-                               aria-describedby="floatingInputHelp" name="end_program"/>
+                               aria-describedby="floatingInputHelp" name="end_program" readonly/>
                         <label for="name">Tanggal Selesai</label>
                     </div>
 
                     <div class="form-check form-switch mt-3">
-                        <input class="form-check-input" type="checkbox" id="prioritas-edit" name="prioritas"/>
+                        <input class="form-check-input" type="checkbox" id="prioritas-edit" name="prioritas" disabled/>
                         <label class="form-check-label" for="prioritas">Prioritas input</label>
                     </div>
 
                     <div class="mt-3">
                         <label for="status-edit" class="form-label">Status Program</label>
-                        <select id="status-edit" class="form-select" name="status">
+                        <select id="status-edit" class="form-select" name="status" disabled>
                             <option value="Aktif">Aktif</option>
                             <option value="Tidak Aktif">Tidak Aktif</option>
                         </select>
                     </div>
 
                     <div class="form-input mt-3">
-                        <textarea name="body" id="body-edit" class="form-control"></textarea>
+                        <textarea name="body" id="body-edit" class="form-control" disabled></textarea>
                     </div>
-
-                    <div class="form-group mt-3">
-                        <input type="file" id="editImage" name="image" data-show-loader="false"
-                               class="form-control" required data-allowed-file-extensions="jpg png"
-                               data-max-file-size-preview="3M" data-max-file-size="3M">
+                    <div class="mt-3 text-center">
+                        <img src="" alt="" id="image-edit" width="500px">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                         Close
                     </button>
-                    <button type="button" class="btn btn-primary" id="editSubmit">Save changes</button>
                 </div>
+                @else
+                    <div class="modal-body">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="title-edit" placeholder="John Doe"
+                                   aria-describedby="floatingInputHelp" name="title"/>
+                            <label for="name">Judul</label>
+                        </div>
+
+                        <div class="form-floating mt-3">
+                            <input type="number" class="form-control" id="funding-edit" placeholder="Rp 100.000"
+                                   aria-describedby="floatingInputHelp" name="funding"/>
+                            <label for="name">Target</label>
+                        </div>
+
+                        <div class="form-floating mt-3">
+                            <input type="date" class="form-control" id="end_program-edit"
+                                   aria-describedby="floatingInputHelp" name="end_program"/>
+                            <label for="name">Tanggal Selesai</label>
+                        </div>
+
+                        <div class="form-check form-switch mt-3">
+                            <input class="form-check-input" type="checkbox" id="prioritas-edit" name="prioritas"/>
+                            <label class="form-check-label" for="prioritas">Prioritas input</label>
+                        </div>
+
+                        <div class="mt-3">
+                            <label for="status-edit" class="form-label">Status Program</label>
+                            <select id="status-edit" class="form-select" name="status">
+                                <option value="Aktif">Aktif</option>
+                                <option value="Tidak Aktif">Tidak Aktif</option>
+                            </select>
+                        </div>
+
+                        <div class="form-input mt-3">
+                            <textarea name="body" id="body-edit" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input type="file" id="editImage" name="image" data-show-loader="false"
+                                   class="form-control" required data-allowed-file-extensions="jpg png"
+                                   data-max-file-size-preview="3M" data-max-file-size="3M">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" id="editSubmit">Save changes</button>
+                    </div>
+                    @endrole
+
             </div>
         </div>
     </div>

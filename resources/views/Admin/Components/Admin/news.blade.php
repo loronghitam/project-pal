@@ -29,12 +29,12 @@
             type: "get",
             url: `/news/${news_id}`,
             dataType: "json",
-            success: function(response) {
+            success: function (response) {
                 $('#title-edit').val(response.title);
+                $('#image-edit').attr('src', '{{ asset('images/berita') }}/' + response.image);
                 $('#body-edit').summernote('reset');
                 $('#body-edit').summernote('editor.pasteHTML', response.body);
                 Swal.close();
-
                 $('#editModal').modal('show');
             }
         });
@@ -63,7 +63,7 @@
                     type: "delete",
                     url: `/news/${id}`,
                     dataType: "json",
-                    success: function(response) {
+                    success: function (response) {
                         Swal.close();
                         if (response.status) {
                             Swal.fire(
@@ -84,7 +84,7 @@
             }
         });
     }
-    $(function() {
+    $(function () {
         $('#body-edit').summernote();
         $.ajaxSetup({
             headers: {
@@ -92,7 +92,7 @@
             }
         });
 
-        $('#createSubmit').click(function(e) {
+        $('#createSubmit').click(function (e) {
             e.preventDefault();
 
             var formData = new FormData($("#createForm")[0]);
@@ -114,7 +114,7 @@
                 cache: false,
                 processData: false,
                 contentType: false,
-                success: function(data) {
+                success: function (data) {
                     Swal.close();
 
                     if (data.status) {
@@ -126,7 +126,7 @@
                         $('#createModal').modal('hide');
                         $('#table').DataTable().ajax.reload();
                     } else {
-                        $('#createError').html("<div class='alert alert-danger alert-dismissible' role='alert'> " + data.msg +" <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close' id='error-close'></button></div>")
+                        $('#createError').html("<div class='alert alert-danger alert-dismissible' role='alert'> " + data.msg + " <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close' id='error-close'></button></div>")
                         setTimeout(function () {
                             $('#error-close').trigger('click');
                         }, 5000)
@@ -135,7 +135,7 @@
             });
         });
 
-        $('#editSubmit').click(function(e) {
+        $('#editSubmit').click(function (e) {
             e.preventDefault();
 
             var formData = new FormData($('#editForm')[0]);
@@ -157,7 +157,7 @@
                 cache: false,
                 processData: false,
                 contentType: false,
-                success: function(data) {
+                success: function (data) {
                     Swal.close();
                     if (data.status) {
                         Swal.fire(
@@ -169,7 +169,7 @@
                         $('#editModal').modal('hide');
                         $('#table').DataTable().ajax.reload();
                     } else {
-                        $('#editError').html("<div class='alert alert-danger alert-dismissible' role='alert'> " + data.msg +" <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close' id='error-close'></button></div>")
+                        $('#editError').html("<div class='alert alert-danger alert-dismissible' role='alert'> " + data.msg + " <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close' id='error-close'></button></div>")
                         setTimeout(function () {
                             $('#error-close').trigger('click');
                         }, 5000)

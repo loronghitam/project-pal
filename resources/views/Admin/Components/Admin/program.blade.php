@@ -34,6 +34,7 @@
                 $('#title-edit').val(response.title);
                 $('#funding-edit').val(response.funding);
                 $('#end_program-edit').val(response.end_program);
+                $('#image-edit').attr('src', '{{ asset('images/program') }}/' + response.image);
                 $("#status-edit").val(response.status).change();
                 (response.prioritas == 'Iya') ? $("#prioritas-edit").prop('checked', true) : $("#prioritas-edit").prop('checked', false);
                 $('#body-edit').summernote('reset');

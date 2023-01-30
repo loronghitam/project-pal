@@ -115,7 +115,13 @@ class NewsController extends Controller
                 ->first();
             return Response::json($data);
         }
-        $data = News::where('user_id', '=', auth()->user()->id)->orderBy('id', 'desc')->get();
+        $user = User::where('id', '=', auth()->user()->id)->first();
+        $roles = $user->getRoleNames()[0];
+        if ($roles == 'SuperAdmin') {
+            $data = News::orderBy('id', 'desc')->get();
+        } else {
+            $data = News::where('user_id', '=', auth()->user()->id)->orderBy('id', 'desc')->get();
+        }
         return datatables()
             ->of($data)
             ->editColumn('updated_at', function ($date) {
