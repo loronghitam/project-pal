@@ -581,6 +581,7 @@ class ComposerStaticInit0e44cbcc82d990bde6e8093ea04e5089
         'Alfa6661\\AutoNumber\\AutoNumberTrait' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/AutoNumberTrait.php',
         'Alfa6661\\AutoNumber\\Models\\AutoNumber' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/Models/AutoNumber.php',
         'Alfa6661\\AutoNumber\\Observers\\AutoNumberObserver' => __DIR__ . '/..' . '/alfa6661/laravel-autonumber/src/Observers/AutoNumberObserver.php',
+        'App\\Console\\Commands\\UpdateStatus' => __DIR__ . '/../..' . '/app/Console/Commands/UpdateStatus.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Exports\\UsersExport' => __DIR__ . '/../..' . '/app/Exports/UsersExport.php',

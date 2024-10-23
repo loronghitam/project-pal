@@ -11,6 +11,7 @@ return array(
     'Alfa6661\\AutoNumber\\AutoNumberTrait' => $vendorDir . '/alfa6661/laravel-autonumber/src/AutoNumberTrait.php',
     'Alfa6661\\AutoNumber\\Models\\AutoNumber' => $vendorDir . '/alfa6661/laravel-autonumber/src/Models/AutoNumber.php',
     'Alfa6661\\AutoNumber\\Observers\\AutoNumberObserver' => $vendorDir . '/alfa6661/laravel-autonumber/src/Observers/AutoNumberObserver.php',
+    'App\\Console\\Commands\\UpdateStatus' => $baseDir . '/app/Console/Commands/UpdateStatus.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Exports\\UsersExport' => $baseDir . '/app/Exports/UsersExport.php',
